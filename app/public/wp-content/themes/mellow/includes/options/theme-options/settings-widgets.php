@@ -1,0 +1,398 @@
+<?php
+/**
+ * Redux Settings
+ *
+ * @package MellowTheme
+ * @version 1.0.0
+ */
+// Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
+
+Redux::set_section(
+	$opt_name,
+	array(
+		'title'      => esc_html__( 'Widgets Styles', 'mellow' ),
+		'id'         => 'mellow_widgets_settings',
+        'icon'       => 'dashicons dashicons-text',
+		'subsection' => false,
+		'fields'     => array(
+            array(
+				'id'          => 'mellow_sidebar_widget_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Text Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-widget-area',
+				),
+			),
+            array(
+				'id'       => 'mellow_sidebar_widget_link',
+				'type'     => 'link_color',
+				'title'    => '',
+                'active'   => false,
+				'output'   => array( '.dtr-widget-area a' ),
+			),
+            array(
+				'id'          => 'mellow_sidebar_arwidgets_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Border Bottom To Archive Widget', 'mellow' ),
+				'default'     => '',
+				'transparent' => true,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-bottom-color' => '.wp-block-archives-list li, .wp-block-latest-comments li',
+				),
+			),
+            array(
+				'id'                => 'mellow_latest_post_heading_typo',
+				'type'              => 'typography',
+				'title'             => esc_html__( 'Latest Post Widget : Post Title', 'mellow' ),
+				'google'            => true,
+                'font-backup'       => true,
+                'all-styles'        => true,
+				'all-subsets'       => true,
+                'text-align'        => false,
+                'color'             => true,
+				'letter-spacing'    => true,
+				'text-transform'    => true,
+                'units'             => 'px',
+				'output'            => array( '.wp-block-latest-posts li' ),
+			),
+            array(
+				'id'                => 'mellow_archive_category_widget_typo',
+				'type'              => 'typography',
+				'title'             => esc_html__( 'Archive / Category Widget', 'mellow' ),
+				'google'            => true,
+                'font-backup'       => true,
+                'all-styles'        => true,
+				'all-subsets'       => true,
+                'text-align'        => false,
+                'color'             => true,
+				'letter-spacing'    => true,
+				'text-transform'    => true,
+                'units'             => 'px',
+				'output'            => array( '.wp-block-categories-list a, .wp-block-archives-list a' ),
+			),
+            array(
+				'id'                => 'mellow_nav_menu_widget',
+				'type'              => 'typography',
+				'title'             => esc_html__( 'Navigation Menu Widget in Sidebar', 'mellow' ),
+				'google'            => true,
+                'font-backup'       => true,
+                'all-styles'        => true,
+				'all-subsets'       => true,
+                'text-align'        => false,
+                'color'             => false,
+				'letter-spacing'    => true,
+				'text-transform'    => true,
+                'units'             => 'px',
+				'output'            => array( '#dtr-secondary-section .widget_nav_menu a, .elementor-widget-wp-widget-nav_menu a' ),
+			),
+            array(
+				'id'    => 'mellow_info_sidebar_widgets_styles',
+				'type'  => 'info',
+                'title' => esc_html__( 'For Widgets in Page / Post Sidebar Only', 'mellow' ),
+			),
+            array(
+				'id'          => 'mellow_general_sidebar_heading_Color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Heading in Sidebar', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-widget-area .wp-block-heading',
+				),
+			),
+            array(
+				'id'          => 'mellow_latest_post_heading_Color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Latest Post Widget : Post Title Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-widget-area .wp-block-latest-posts a',
+				),
+			),
+            array(
+				'id'          => 'mellow_archive_category_widget_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Archive / Category Widget - Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-widget-area .wp-block-categories-list a, .dtr-widget-area .wp-block-archives-list a',
+				),
+			),
+            array(
+				'id'          => 'mellow_archive_category_widget_hover_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Archive / Category Widget - Hover Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-widget-area .wp-block-categories-list li:hover a, .dtr-widget-area .wp-block-archives-list li:hover a',
+				),
+			),
+			array(
+				'id'    => 'mellow_info_social_widgets_styles',
+				'type'  => 'info',
+                'title' => esc_html__( 'Custom - Social Widget - Circle and Square Style', 'mellow' ),
+			),
+			array(
+				'id'          => 'mellow_bgstyle_social_bg_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Background Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'background-color' => '.dtr-social-circle a, .dtr-social-square a',
+				),
+			),
+			array(
+				'id'          => 'mellow_bgstyle_social_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-social-circle a, .dtr-social-square a',
+				),
+			),
+			array(
+				'id'          => 'mellow_bgstyle_social_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Border Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-color' => '.dtr-social-circle a, .dtr-social-square a',
+				),
+			),
+			array(
+				'id'          => 'mellow_bgstyle_social_hover_bg_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Background Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'background-color' => '.dtr-social-circle a:hover, .dtr-social-square a:hover',
+				),
+			),
+			array(
+				'id'          => 'mellow_bgstyle_social_hover_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-social-circle a:hover, .dtr-social-square a:hover',
+				),
+			),
+			array(
+				'id'          => 'mellow_bgstyle_social_hover_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Border Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-color' => '.dtr-social-circle a:hover, .dtr-social-square a:hover',
+				),
+			),
+			// In footer
+			array(
+				'id'    => 'mellow_info_footer_social_widgets_styles',
+				'type'  => 'info',
+                'title' => esc_html__( 'Custom - Social Widget - Circle and Square Style - In Footer Section', 'mellow' ),
+			),
+			array(
+				'id'          => 'mellow_footer_bgstyle_social_bg_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Background Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'background-color' => '.dtr-footer-section-wrap .dtr-social-circle a, .dtr-footer-section-wrap .dtr-social-square a',
+				),
+			),
+			array(
+				'id'          => 'mellow_footer_bgstyle_social_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-footer-section-wrap .dtr-social-circle a, .dtr-footer-section-wrap .dtr-social-square a',
+				),
+			),
+			array(
+				'id'          => 'mellow_footer_bgstyle_social_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Border Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-color' => '.dtr-footer-section-wrap .dtr-social-circle a, .dtr-footer-section-wrap .dtr-social-square a',
+				),
+			),
+			array(
+				'id'          => 'mellow_footer_bgstyle_social_hover_bg_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Background Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'background-color' => '.dtr-footer-section-wrap .dtr-social-circle a:hover, .dtr-footer-section-wrap .dtr-social-square a:hover',
+				),
+			),
+			array(
+				'id'          => 'mellow_footer_bgstyle_social_hover_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-footer-section-wrap .dtr-social-circle a:hover, .dtr-footer-section-wrap .dtr-social-square a:hover',
+				),
+			),
+			array(
+				'id'          => 'mellow_footer_bgstyle_social_hover_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Border Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-color' => '.dtr-footer-section-wrap .dtr-social-circle a:hover, .dtr-footer-section-wrap .dtr-social-square a:hover',
+				),
+			),
+			// Vertical
+			array(
+				'id'    => 'mellow_info_vert_social_widgets_styles',
+				'type'  => 'info',
+                'title' => esc_html__( 'Vertical Style Social with Title', 'mellow' ),
+			),
+			array(
+				'id'                => 'mellow_vert_social_text_typo',
+				'type'              => 'typography',
+				'title'             => esc_html__( 'Font', 'mellow' ),
+				'google'            => true,
+                'font-backup'       => true,
+                'all-styles'        => true,
+				'all-subsets'       => true,
+                'text-align'        => false,
+				'letter-spacing'    => true,
+                'font-size'         => true,
+                'line-height'       => true,
+				'text-transform'    => true,
+                'units'             => 'px',
+                'color'             => false,
+				'output'            => array( '.dtr-social-vertical-title a' ),
+			),    
+			array(
+				'id'          => 'mellow_vert_social_text_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Title Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-social-vertical-title a',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_hover_text_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Title Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-social-vertical-title a:hover',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_bg_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Icon Background Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'background-color' => '.dtr-social-vertical-title a::before',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Icon Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-social-vertical-title a::before',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'Icon Border Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-color' => '.dtr-social-vertical-title a::before',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_hover_bg_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Icon Background Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'background-color' => '.dtr-social-vertical-title a:hover::before',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_hover_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Icon Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'color' => '.dtr-social-vertical-title a:hover::before',
+				),
+			),
+			array(
+				'id'          => 'mellow_vert_social_hover_border_color',
+				'type'        => 'color',
+				'title'       => esc_html__( 'On Hover: Icon Border Color', 'mellow' ),
+				'default'     => '',
+				'transparent' => false,
+				'validate'    => 'color',
+				'output'      => array(
+					'border-color' => '.dtr-social-vertical-title a:hover::before',
+				),
+			),
+		),
+	)
+);

@@ -1,0 +1,11 @@
+/* Dashicons for customizer panel */
+#accordion-section-title_tagline > h3:before, #accordion-section-background_image > h3:before, #accordion-section-colors > h3:before, #accordion-panel-nav_menus > h3:before, #accordion-panel-widgets > h3:before, #accordion-section-static_front_page > h3:before, #accordion-section-custom_css > h3:before { font-family: "dashicons"; content: "\f108"; text-decoration: inherit; font-weight: 400; font-style: normal; width: 22px; height: 22px; font-size: 22px; line-height: 1; display: inline-block; vertical-align: top; text-align: center; -webkit-transition: color .1s ease-in 0; transition: color .1s ease-in 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin-right: 5px; color: #0085ba; }
+#accordion-section-title_tagline > h3:before { content: "\f115" }
+#accordion-section-background_image > h3:before { content: "\f128" }
+#accordion-section-colors > h3:before { content: "\f100" }
+#accordion-panel-nav_menus > h3:before { content: "\f333" }
+#accordion-panel-widgets > h3:before { content: "\f478" }
+#accordion-section-static_front_page > h3:before { content: "\f498" }
+#accordion-section-custom_css > h3:before { content: "\f106" }
+#customize-control-mellow_logo_type, #customize-control-mellow_text_logo_control, #customize-control-mellow_logo_height_control, #customize-control-mellow_alt_logo_height_control, #customize-control-mellow_resp_logo_type { border-bottom: 3px double #0073aa; padding-bottom: 20px; margin-bottom: 15px; }
+#customize-theme-controls .customize-pane-parent .accordion-section-title { display: flex; align-items: center;}

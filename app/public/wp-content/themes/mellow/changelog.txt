@@ -1,0 +1,9 @@
+** Mellow **
+
+** ----- v1.0.2 - 17 June 2025----- **
+- Updated demo data. Removed Hard Crop of Portfolio Element for demo.
+
+** ----- v1.0.1 - 9 June 2025----- **
+- Minor styling changes
+
+** ----- Initial Release ----- **

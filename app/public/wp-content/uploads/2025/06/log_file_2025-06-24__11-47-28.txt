@@ -1,0 +1,67 @@
+
+---Downloaded files---
+The import files for: Mellow Demo Data were successfully downloaded!
+Initial max execution time = 1200
+Files info:
+Site URL = http://prince-antwi-portfolio.local
+Data file = C:\Users\Prince\Local Sites\prince-antwi-portfolio\app\public/wp-content/themes/mellow/includes/imports/content.xml
+Widget file = C:\Users\Prince\Local Sites\prince-antwi-portfolio\app\public/wp-content/themes/mellow/includes/imports/widgets.wie
+Customizer file = C:\Users\Prince\Local Sites\prince-antwi-portfolio\app\public/wp-content/themes/mellow/includes/imports/customizer.dat
+Redux files:
+mellow_theme_mod -> C:\Users\Prince\Local Sites\prince-antwi-portfolio\app\public/wp-content/themes/mellow/includes/imports/redux.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Footer - Column 1 : 
+
+Block - No Title - Imported
+Block - No Title - Imported
+Block - No Title - Imported
+Block - No Title - Imported
+Block - No Title - Imported
+
+Footer - Column 2 : 
+
+Block - No Title - Imported
+Navigation Menu - No Title - Imported
+
+Footer - Column 3 : 
+
+Block - No Title - Imported
+Block - No Title - Imported
+Custom: Social Network - No Title - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: mellow_theme_mod finished successfully!
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+
